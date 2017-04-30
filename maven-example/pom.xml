@@ -4,7 +4,7 @@
     <modelVersion>4.0.0</modelVersion>
     <groupId>org.jfrog.example.bintray.maven</groupId>
     <artifactId>multi</artifactId>
-    <version>1.0</version>
+    <version>0.1-SNAPSHOT</version>
     <packaging>pom</packaging>
     <name>Multi Modules Build Using Bintray.com</name>
 
@@ -16,7 +16,7 @@
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <bintray.repo>bintray-examples/repo</bintray.repo>
+        <bintray.repo>cloudctrl/repo</bintray.repo>
         <bintray.package>maven-example</bintray.package>
     </properties>
 
@@ -48,8 +48,16 @@
 
     <distributionManagement>
         <repository>
-            <id>bintray-repo-maven-example</id>
-            <url>https://api.bintray.com/maven/${bintray.subject}/${bintray.repo}/${bintray.package}/;publish=1</url>
+            <id>bintray-jvdsandt-cloudctrl</id>
+            <url>https://api.bintray.com/maven/jvdsandt/${bintray.repo}/${bintray.package}/;publish=1</url>
         </repository>
     </distributionManagement>
+
+    <scm>
+        <connection>scm:git:https://github.com/jvdsandt/bintray-examples.git</connection>
+        <developerConnection>scm:git:git@github.com:jvdsandt/bintray-examples.git</developerConnection>
+        <url>https://github.com/jvdsandt/bintray-examples</url>
+        <tag>HEAD</tag>
+    </scm>
+
 </project>
